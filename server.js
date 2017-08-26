@@ -17,7 +17,7 @@ var sio = require("socket.io")(http);
 // var PORT = process.env.PORT || 8080;
 
 app.get('/', function(req, res) {
-	res.sendFile(__dirname + '/public/home.html');
+	res.sendFile(__dirname + '/public/chatroom.html');
 });
 
 sio.on('connection', function(socket){

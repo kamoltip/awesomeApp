@@ -5,28 +5,49 @@
 // Dependencies
 // =============================================================
 var express = require("express");
-var bodyParser = require("body-parser");
+// var bodyParser = require("body-parser");
+var app = express();
+var http = require("http").Server(app);
+var sio = require("socket.io")(http);
+
 
 // Sets up the Express App
 // =============================================================
-var app = express();
-var PORT = process.env.PORT || 8080;
 
-// Sets up the Express app to handle data parsing
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+// var PORT = process.env.PORT || 8080;
 
-// Static directory
-app.use(express.static("./public"));
-
-// Routes
-// =============================================================
-require("./routes/api-routes.js")(app);
-
-// Starts the server to begin listening
-// =============================================================
-app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
+app.get('/', function(req, res) {
+	res.sendFile(__dirname + '/public/home.html');
 });
+
+sio.on('connection', function(socket){
+  socket.on('chat message', function(msg) {
+  	sio.emit('chat message', msg);
+  });
+  // socket.on('disconnect', function(){
+  //   console.log('user disconnected');
+  // });
+});
+
+http.listen(3000, function() {
+	console.log('listening on *:3000')
+});
+
+// // Sets up the Express app to handle data parsing
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.text());
+// app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+
+// // Static directory
+// app.use(express.static("./public"));
+
+// // Routes
+// // =============================================================
+// require("./routes/api-routes.js")(app);
+
+// // Starts the server to begin listening
+// // =============================================================
+// app.listen(PORT, function() {
+//   console.log("App listening on PORT " + PORT);
+// });

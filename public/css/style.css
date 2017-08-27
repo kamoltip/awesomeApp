@@ -6,12 +6,15 @@ body, html {
   height: 100%;
   box-sizing: border-box;
 }
+#modal1{
+    height:80%;
+}
 
-.textImage {
+/*.textImage {
   width: 60%;
   height: auto;
   /*background-image: url("../images/phone.gif");*/
-  background-size: cover;
+/*  background-size: cover;
   background-position: center center;
   position:absolute;
   z-index: -1;
@@ -33,7 +36,9 @@ h1{
 a{
     margin-right:3%;
     margin-left: 2%;
-}
+}*/
+
+
 /*/end of air stuff/*/
 
     body {}
@@ -47,21 +52,24 @@ a{
     img {
         height: auto;
         width: 100%;
-        background-repeat: no-repeat;
+        /*background-repeat: no-repeat;*/
         background-size: cover;
         filter: grayscale(100%);
-        z-index: 0;
+        /*z-index: 0;*/
+        position: fixed;
+        background-position: center center;
     }
     
     .header {
         position: absolute;
-        top: 10%;
+        top: 20%;
         Left: 10%;
         z-index: 1;
         font-family: 'Raleway', sans-serif;
         /* color: #6666ff; */
         /* color: #ffffff; */
         color: #ff6868;
+        text-shadow: 2px, 3px white;
     }
     
     svg {
@@ -76,15 +84,18 @@ a{
         font-size: 30px;
         color: #6666ff;
     }
+    .nav-wrapper{
+
+    }
     /* nav {
         background-color: #ffffff;
     } */
     
     .typewriter {
         position: absolute;
-        z-index: 1;
-        top: 85%;
-        left: 10%;
+        z-index: 0;
+       /* top: 85%;
+        left: 10%;*/
         color: #ff6868;
     }
     
@@ -110,7 +121,7 @@ a{
         background-color: #ffffff;
         height: 70%;
         width: 50%;
-        /* box-shadow: 3px 3px #404040; */
+         //box-shadow: 3px 3px #404040; 
         border-radius: 10px;
     }
     
@@ -127,6 +138,7 @@ a{
     
     h4 {
         font-weight: bold;
+        position:0;
     }
     
     .chatrooms {
@@ -136,7 +148,7 @@ a{
         background-color: #ffffff;
         height: 40%;
         width: 20%;
-        /* box-shadow: 3px 3px #404040; */
+         box-shadow: 3px 3px #404040; 
         border-radius: 10px;
     }
     
@@ -147,7 +159,7 @@ a{
         background-color: #ffffff;
         height: 40%;
         width: 20%;
-        /* box-shadow: 3px 3px #404040; */
+         box-shadow: 3px 3px #404040; 
         border-radius: 10px;
     }
     

@@ -1,0 +1,317 @@
+<!DOCtype html>
+<html>
+    <head>
+        <title>SpeakUp</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!-- <link rel="stylesheet " id="styles " type="text/css " href="css/style.css "> -->
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Montserrat|Raleway|Saira " rel="stylesheet ">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+        img {
+        height: auto;
+        width: 100%;
+        /*background-repeat: no-repeat;*/
+        background-size: cover;
+        filter: grayscale(100%);
+        /*z-index: 0;*/
+        position: fixed;
+        background-position: center center;
+        position: relative;
+        }
+        
+        .header {
+        position: absolute;
+        top: 20%;
+        Left: 10%;
+        z-index: 1;
+        font-family: 'Raleway', sans-serif;
+        /* color: #6666ff; */
+        /* color: #ffffff; */
+        color: #ff6868;
+        text-shadow: 2px, 3px white;
+        }
+        
+        svg {
+        width: 80%;
+        height: auto;
+        }
+        
+        nav,
+        ul,
+        a {
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+        color: #6666ff;
+        }
+        .nav-wrapper{
+        }
+        /* nav {
+        background-color: #ffffff;
+        } */
+        
+        .typewriter {
+        position: absolute;
+        z-index: 0;
+        /* top: 85%;
+        left: 10%;*/
+        color: #ff6868;
+        }
+        
+        #start {
+        text-align: center;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        }
+        
+        #join {
+        text-align: center;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        }
+        
+        /* .chatbox {
+        text-align: center;
+        position: absolute;
+        top: 10%;
+        left: 25%;
+        background-color: #ffffff;
+        height: 70%;
+        width: 50%;
+        //box-shadow: 3px 3px #404040;
+        border-radius: 10px;
+        }*/
+        
+        /* .textbox {
+        position: absolute;
+        top: 83%;
+        left: 25%;
+        background-color: #ffffff;
+        height: 10%;
+        width: 50%;
+        box-shadow: 3px 3px #404040;
+        border-radius: 10px;
+        }*/
+        
+        h4 {
+        font-weight: bold;
+        position:0;
+        }
+        
+        /*    .chatrooms {
+        position: absolute;
+        top: 10%;
+        left: 77%;
+        background-color: #ffffff;
+        height: 40%;
+        width: 20%;
+        box-shadow: 3px 3px #404040;
+        border-radius: 10px;
+        }*/
+        
+        /*.friendslist {
+        position: absolute;
+        top: 53%;
+        left: 77%;
+        background-color: #ffffff;
+        height: 40%;
+        width: 20%;
+        box-shadow: 3px 3px #404040;
+        border-radius: 10px;
+        }*/
+        
+        .typewriter h4 {
+        overflow: hidden;
+        /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange;
+        /* The typwriter cursor */
+        white-space: nowrap;
+        /* Keeps the content on a single line */
+        margin: 0 auto;
+        /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em;
+        /* Adjust as needed */
+        animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        /* The typing effect */
+        
+        @keyframes typing {
+        from {
+        width: 0
+        }
+        to {
+        width: 100%
+        }
+        }
+        /* The typewriter cursor effect */
+        
+        @keyframes blink-caret {
+        from,
+        to {
+        border-color: transparent
+        }
+        50% {
+        border-color: #ff6868;
+        }
+        }
+        #message{
+        position: absolute;
+        top: 83%;
+        left: 25%;
+        background-color: #ffffff;
+        height: 10%;
+        width: 50%;
+        /*box-shadow: 3px 3px #404040;*/
+        border-radius: 10px;
+        }
+        
+        .chatWindow{
+        position: absolute;
+        top: 83%;
+        left: 25%;
+        background-color: #ffffff;
+        height: 10%;
+        width: 50%;
+        box-shadow: 3px 3px #404040;
+        border-radius: 10px;
+        }
+        .textbox {
+        position: absolute;
+        top: 83%;
+        left: 25%;
+        background-color: #ffffff;
+        height: 10%;
+        width: 50%;
+        /*box-shadow: 3px 3px #404040;*/
+        border-radius: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        
+        <nav>
+            <div clars="nav-wrapper">
+                <a href="home.html" class="brand-logo"><i class="material-icons">lightbulb_outline</i>SpeakUp</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="home.html">home</a></li>
+                    <li><a href="">contact</a></li>
+                    <li><a href="">about us</a></li>
+                    <li><a href="">login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <img src="img/city.jpeg" alt="city">
+        <div class="container ">
+            <div class="row grayscale">
+                <div class="header col-m8 ">
+                    <br>
+                    <a class="start waves-effect waves-light btn modal-trigger" href="">Start</a><br>a Conversation<br><br>
+                    <a class="join waves-effect waves-light btn modal-trigger" href="">Join</a><br>a Conversation
+                </div>
+                <!-- <div class="z-depth-3 chatbox">
+                    <div class="row"> -->
+                        
+                    
+           <!--          <ul id="messages"></ul>
+                    <form action="">
+                        <input id="m" autocomplete="off" /><button>Send</button>
+                    </form>
+                <ul id="chatWindow"></ul>
+                
+                <form>
+                    <a class="waves-effect waves-light large-btn teal" href=""><div class=".textbox" autocomplete="off" /></div></a>
+                    <input type="text" name="">
+                </form>
+            </div>
+        </div> -->
+        <!-- Modal Trigger -->
+        <div class="fixed-action-btn">
+            <a class="btn-floating waves-effect waves-light btn modal-trigger red" href="#modal2"><i class="material-icons">menu</i></a></div>
+            <!-- Modal Structure -->
+            <div id="modal2" class="modal bottom-sheet">
+                <div class="modal-content">
+                    <ul id="tabs-swipe-demo" class="tabs">
+                        <li class="tab col s3"><a href="#test-swipe-1">Chat Rooms</a></li>
+                        <li class="tab col s3"><a class="active" href="#test-swipe-2">Friend Lists</a></li>
+                        
+                    </ul>
+                    <div id="test-swipe-1" class="col s12"><ul>
+                        
+                        <li><a href="#!">Cats</a></li>
+                        <li><a href="#!">Baseball</a></li>
+                        <li><a href="#!">Movies</a></li>
+                        <li><a href="#!">Home Improvement</a></li>
+                        <li><a href="#!">Board Games</a></li>
+                        <li><a href="#!">Cats</a></li>
+                        <li><a href="#!">Baseball</a></li>
+                        <li><a href="#!">Movies</a></li>
+                        <li><a href="#!">Home Improvement</a></li>
+                        <li><a href="#!">Board Games</a></li>
+                    </ul></div>
+                    <div id="test-swipe-2" class="col s12">
+                        
+                        <ul>
+                            <li><a href="#!">ARRRnold</a></li>
+                            <li><a href="#!">Han Solo</a></li>
+                            <li><a href="#!">The Donald</a></li>
+                            <li><a href="#!">Batman</a></li>
+                            <li><a href="#!">Steve the Pirate</a></li>
+                        </ul></div>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                </div>
+                <!--     <div class="textbox">
+                    <p> Enter some text to start a conversation!</p>
+                </div>
+                <div class="chatrooms">
+                    <p>Chat Rooms</p>
+                    <ul>
+                        <li><a href="#!">Cats</a></li>
+                        <li><a href="#!">Baseball</a></li>
+                        <li><a href="#!">Movies</a></li>
+                        <li><a href="#!">Home Improvement</a></li>
+                        <li><a href="#!">Board Games</a></li>
+                    </ul>
+                </div> -->
+                <!--          <div class="friendslist">
+                    <p>Friends List</p>
+                    <ul>
+                        <li><a href="#!">ARRRnold</a></li>
+                        <li><a href="#!">Han Solo</a></li>
+                        <li><a href="#!">The Donald</a></li>
+                        <li><a href="#!">Batman</a></li>
+                        <li><a href="#!">Steve the Pirate</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+        <!-- /start Air script/////////////////////////////// -->
+        
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+        $(document).ready(function() {
+        $(".modal").modal();
+        });
+        // jQuery(function($){
+        // var socket = io.connect();
+        // var$messageForm = $('#send-message');
+        // var$messageBox = $('#messageBox');
+        // var $chat = $('#chatWindow');
+        // $messageForm.submit(function(e){
+        // e.preventDefault();
+        // socket.emit('send massage', $messageBox.val);
+        // $messageBox.val('');
+        // });
+        // });
+        
+        </script>
+        
+    </body>
+</html>

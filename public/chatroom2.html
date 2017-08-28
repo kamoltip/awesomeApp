@@ -85,7 +85,7 @@
         border-radius: 10px;
         }
         
-        .textbox {
+       /* .textbox {
         position: absolute;
         top: 83%;
         left: 25%;
@@ -94,7 +94,7 @@
         width: 50%;
         box-shadow: 3px 3px #404040;
         border-radius: 10px;
-        }
+        }*/
         
         h4 {
         font-weight: bold;
@@ -174,20 +174,22 @@
         top: 20%;
         left: 25%;
         background-color:white;
-        height: 70%;
+        height: 64.5%;
         width: 50%;
-        //box-shadow: 3px 4px #404040;
+        /*//box-shadow: 3px 4px #404040;*/
         border-radius: 10px;
+        opacity:0.8;
         }
-        .textbox {
+        input.textbox {
         position: relative;
-        bottom:80%;
-        left: 0%;
+        margin-top: 60%;
+        margin-right: 10%
         background-color: #ffffff;
-        height: auto;
-        width: 30%;
+        height: 40px;
+        width: 100%;
+
         /* box-shadow: 3px 3px #404040; */
-        border-radius: 10px;
+        /*border-radius: 5px;*/
         }
         .send{
         position: absolute;
@@ -222,7 +224,7 @@
                 </div>
                 
                 <div class="z-depth-3 chatbox">
-                    <div class="row">
+                    
                         
                         
                         <!-- CHAT ROOM FEATURE IS HERE-->
@@ -230,13 +232,18 @@
                         <!-- <ul id="messages"></ul> -->
                         <!-- FORM IS WHERE YOU INPUT TEXT -->
                         
-                    </div>
+                    
                 </div>
                 
-                <div class="container"><input type="text" class="textbox"></input></div>
-                <form action="">
-                    <a class="teal waves-effect waves-light btn send" input id="m" autocomplete="off" />Send</a>
-                </form>
+                <div class="container">
+                <div class="input-field col s12">
+                <input type="text" placeholder="Text" class="textbox"></input>
+                <label for="Text"></label>
+                </div>
+                </div>
+                <!-- <form action=""> -->
+                    <button class="waves-effect waves-light teal btn send" type="submit" name="action" input id="m" autocomplete="off" />Send</button>
+                <!-- </form> -->
             </div>
             
             <!-- Modal Trigger -->
@@ -250,7 +257,7 @@
                             <li class="tab col s3"><a class="active" href="#test-swipe-2">Friend Lists</a></li>
                             
                         </ul>
-                        <div id="test-swipe-1" class="col s12"><ul>
+                        <div id="test-swipe-1" class="col s12 text-align center"><ul>
                             
                             <li><a href="#!">Cats</a></li>
                             <li><a href="#!">Baseball</a></li>
@@ -263,7 +270,7 @@
                             <li><a href="#!">Home Improvement</a></li>
                             <li><a href="#!">Board Games</a></li>
                         </ul></div>
-                        <div id="test-swipe-2" class="col s12">
+                        <div id="test-swipe-2" class="col s12 text-align center">
                             
                             <ul>
                                 <li><a href="#!">ARRRnold</a></li>
@@ -276,7 +283,7 @@
                             
                         </div>
                         <div class="modal-footer">
-                            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
                         </div>
                     </div>
                     <!--     <div class="textbox">

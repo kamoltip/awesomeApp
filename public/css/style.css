@@ -9,6 +9,9 @@ body, html {
 #modal1{
     height:80%;
 }
+.modal-content{
+    opacity:0.5;
+}
 
 /*.textImage {
   width: 60%;

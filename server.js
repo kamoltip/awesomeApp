@@ -16,9 +16,8 @@ var sio = require("socket.io")(http);
 
 // var PORT = process.env.PORT || 8080;
 
-app.get('/', function(req, res) {
-	res.sendFile(__dirname + '/public/chatroom.html');
-});
+// require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
 sio.on('connection', function(socket){
   socket.on('chat message', function(msg) {

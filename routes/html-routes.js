@@ -13,20 +13,20 @@ module.exports = function(app) {
 
   // index route loads home.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+    res.render("home");
   });
 
-  app.get("/chatroom", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/chatroom2.html"));
+  app.get("/chatroom2", function(req, res) {
+    res.render("chatroom2");
   });
 
   // about route loads about.html
   app.get("/about", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/about.html"));
+    res.render("about");
   });
 
   app.get("/technology", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/technology.html"));
+    res.render("technology");
   });
 
   //route to ID 

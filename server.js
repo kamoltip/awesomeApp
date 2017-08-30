@@ -10,7 +10,7 @@ var app = express();
 var http = require("http").Server(app);
 var sio = require("socket.io")(http);
 
-
+var handlebars = require("express-handlebars");
 // Sets up the Express App
 // =============================================================
 
@@ -27,6 +27,9 @@ sio.on('connection', function(socket){
   //   console.log('user disconnected');
   // });
 });
+
+app.engine('handlebars', handlebars({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
 http.listen(3000, function() {
 	console.log('listening on *:3000')

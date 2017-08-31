@@ -140,14 +140,39 @@ body {}
         background-size: cover;
         filter: gray;
     } */
-    
+    .icons {
+        text-align:center;
+    width:375px;
+    height:375px;
+    z-index:1;
+    background:#ee6e73;
+    border-radius:10px;
+    position:absolute;
+    top:25%;
+    left:60%;
+    margin:5px;
+    padding:5px;
+    }
+.about {
+    font-size:20px;
+    font-family: 'Raleway', sans-serif;
+    position:absolute;
+    top:25%;
+    left:10%;
+    background:#ffffff;
+        border-radius:10px;
+        padding:10px;
+        width:500px;
+        height:475px;
+        z-index:1;
+    }
 .techIcon {
     width:100px;
     height:100px;
     z-index:1;
     background:#ffffff;
     border-radius:10px;
-    padding:10px;
+    padding:5px;
     margin:5px;
     display:inline-block;
 
